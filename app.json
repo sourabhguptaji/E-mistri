@@ -1,0 +1,12 @@
+{
+  "name": "e-mistri",
+  "displayName": "e-mistri",
+  "expo": {
+    "name": "e-mistri",
+    "slug": "e-mistri",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
