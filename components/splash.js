@@ -22,7 +22,7 @@ export default class Splash extends Component<{}>
         var that = this;
         setTimeout(function () {
             that.Hide_Splash_Screen();
-        }, 2000);
+        }, 4000);
     }
 
     render() {
