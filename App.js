@@ -6,20 +6,20 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './components/login'
-import Register from './components/register'
+import Register from './components/Register'
 const Stack = createStackNavigator();
 
 const Auth = () => {
     // Stack Navigator for Login and Sign up Screen
     return (
-        <Stack.Navigator initialRouteName="LoginScreen">
+        <Stack.Navigator initialRouteName="Register">
             <Stack.Screen
-                name="LoginScreen"
+                name="Login"
                 component={Login}
                 options={{ headerShown: false }}
             />
             <Stack.Screen
-                name="RegisterScreen"
+                name="Register"
                 component={Register}
                 options={{
                     title: 'Register', //Set Header Title

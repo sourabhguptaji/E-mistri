@@ -4,7 +4,8 @@ import {
     Image, TouchableOpacity, Alert
 } from 'react-native';
 import Login from '../components/login'
-export default class Splash extends Component<{}>
+
+export default class Splash extends Component
 {
     constructor() {
         super();
@@ -22,7 +23,7 @@ export default class Splash extends Component<{}>
         var that = this;
         setTimeout(function () {
             that.Hide_Splash_Screen();
-        }, 2000);
+        }, 4000);
     }
 
     render() {
@@ -37,7 +38,7 @@ export default class Splash extends Component<{}>
             <View style={styles.MainContainer}>
                 <Text style={{ textAlign: 'center' }}>  </Text>
                 {
-                    (this.state.isVisible === true) ? Splash_Screen : <Login/>
+                    (this.state.isVisible === true) ? Splash_Screen : <Login navigation={this.props.navigation} />
                 }
             </View>
         );
