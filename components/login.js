@@ -21,11 +21,14 @@ function Login({ navigation }) {
         setErrortext('');
         if (!username) {
             alert('Please fill username');
-            return;
+            return false;
         }
         if (!userpassword) {
             alert('Please fill Password');
-            return;
+            return false;
+        }
+        else{
+            return true;
         }
     }
     
@@ -40,14 +43,16 @@ function Login({ navigation }) {
                  return false
              }
              return true
-         }
+         }*/
      
-         making_api_call = () => {
-             if (this.validate_field()) {
-                 alert("successfully login")
+        const  making_api_call = () => {
+             if (handleSubmitPress()) {
+                if(username && userpassword){
+                    navigation.replace('DrawerNavigatorRoutes');
+                    alert("successfully login");
+                }
              }
          }
-         */
 
 
 
@@ -80,7 +85,7 @@ function Login({ navigation }) {
                         justifyContent: "center", alignItems: "center", borderRadius: 40,
                         backgroundColor: "black", alignSelf: "center"
                     }}
-                        onPress={handleSubmitPress}
+                        onPress={making_api_call}
 
 
                     >

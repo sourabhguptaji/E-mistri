@@ -5,8 +5,10 @@ import Splash from './components/splash';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Login from './components/login'
-import Register from './components/Register'
+import Login from './components/login';
+import Register from './components/Register';
+import DrawerNavigatorRoutes from './components/DrawerNavigatorRoutes';
+
 const Stack = createStackNavigator();
 
 const Auth = () => {
@@ -56,8 +58,13 @@ export default function App() {
                   options={{ headerShown: false }}
               />
               {/* Navigation Drawer as a landing page */}
-             
-          </Stack.Navigator>
+              <Stack.Screen
+                  name="DrawerNavigatorRoutes"
+                  component={DrawerNavigatorRoutes}
+                 // Hiding header for Navigation Drawer
+                  options={{headerShown: false}}
+              />
+            </Stack.Navigator>
       </NavigationContainer>
   );
 }
