@@ -4,7 +4,7 @@ import {
     Image, TouchableOpacity, Alert, TextInput, 
 } from 'react-native';
 import { color } from 'react-native-reanimated';
-import Register from '../components/Register'
+import Register from '../components/register'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 function Login({ navigation }) {
